@@ -37,7 +37,7 @@ ul{
 @media (min-width: 720px) and (max-width: 1080px) {
   li{ 
       position: relative;
-      bottom: 100px;
+      bottom: -150px;
       font-size: 35px;
       margin: 10px;
    
