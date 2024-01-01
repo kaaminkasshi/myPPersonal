@@ -58,15 +58,7 @@ ul{
     text-decoration: underline;
   } 
 }  
-@media (min-width: 338px) and (max-width: 842px) {
-  li{ 
-   
-      position: relative;
-      bottom: -150px;
-      font-size: 35px;
-      margin: 10px;
-  } 
-}
+
 @media (min-width: 1080px) and (max-width: 1920px) {
   li{ 
       position: relative;
