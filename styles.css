@@ -1,0 +1,301 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+} 
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  } 
+  .text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+ul{ 
+    display: flex;
+}  
+@media (min-width: 100px) and (max-width: 720px) {
+    li{ 
+        position: relative;
+        bottom: 245px;
+        font-size: 25px;
+        margin: 10px;
+     
+    } 
+}
+@media (min-width: 720px) and (max-width: 1080px) {
+  li{ 
+      position: relative;
+      bottom: 100px;
+      font-size: 35px;
+      margin: 10px;
+   
+  }  
+  .w{ 
+    color: #fff;
+    text-decoration: underline;
+}
+.myName{ 
+    list-style-type: none; 
+
+} 
+.blk {
+  
+   color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  } 
+} 
+@media (min-width: 1080px) and (max-width: 1920px) {
+  li{ 
+      position: relative;
+      bottom: -6em;
+      font-size: 50px;
+      margin: 15px;
+      right: 20px;
+  }  
+  .w{ 
+    color: #fff;
+    text-decoration: underline;
+}
+.myName{ 
+    list-style-type: none; 
+
+} 
+.blk {
+  
+   color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  } 
+}
+.w{ 
+    color: #fff;
+    text-decoration: underline;
+}
+.myName{ 
+    list-style-type: none; 
+
+} 
+.blk {
+  
+   color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  } 
+
+ 
+
+ 
+  .text-content h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .text-content p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .portfolio {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-half-circle {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    animation: leftCircleAnimation 2s ease-out forwards; 
+  }
+  
+  .left-half-circle img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+    object-fit: cover; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 50% 50%);
+  }
+  
+  .right-straps {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    animation: rightStrapsAnimation 2s ease-out forwards;
+  }
+  
+  .strap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .strap img {
+    width: 80px; /* Adjust the width of the strap image */
+    border-radius: 50%;
+  }
+  @keyframes leftCircleAnimation {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rightStrapsAnimation {
+    from {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* Add more styles and animations as needed */  
+ 
+.content_box{ 
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  bottom: 5px;
+  border: 2px solid black;
+} 
+.center-align {
+  text-align: center; 
+  
+}
+
+.justify-align { 
+ margin: 3px;
+}
+
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+} 
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #020000;
+  margin: 6px 0;
+  transition: 0.4s;
+} 
+.white-bars {
+  background-color: white; /* Color after clicking */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+@keyframes shine {
+  0% {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    color: #ffcc00; /* Adjust the color as needed */
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.9);
+  }
+  100% {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 15px;
+  position: relative;
+}
+
+.navbar a.shine:hover {
+  animation: shine 2s infinite; 
+}
+
+.navbar.active a.shine {
+  color: #ffcc00; 
+  animation: none;
+}
+.navbar a:hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(35, 35, 245);
+  bottom: -5px;
+  left: 0;
+} 
+.navbar.active a:hover::before {
+  background-color: black; 
+} 
+
+.navbar.active {
+  display: flex;
+  animation: fadeIn 0.5s;
+} 
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.typing-cursor {
+  margin-left: 5px; /* Adjust the cursor's initial position */
+  animation: cursor-blink 0.75s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
